@@ -23,6 +23,54 @@
     <main>
       <h1>Магазин готовых шаблонов</h1>
       <section>
+        <h2>Фильтр шаблонов</h2>
+        <form class="" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>Сетка:</legend>
+            <ul>
+              <li>
+                <input id="adaptive-form" type="radio" name="greed" value="adaptive" checked>
+                <label for="adaptive-form">Адаптивная</label>
+              </li>
+              <li>
+                <input id="fixed-form" type="radio" name="greed" value="fixed">
+                <label for="fixed-form">Фиксированная</label>
+              </li>
+              <li>
+                <input id="elastic-form" type="radio" name="greed" value="elastic">
+                <label for="elastic-form">Эластичная</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Особенности:</legend>
+            <ul>
+              <li>
+                <input id="slider-form" type="checkbox" name="slider" checked>
+                <label for="slider-form">Слайдер</label>
+              </li>
+              <li>
+                <input id="advantages-form" type="checkbox" name="advantages">
+                <label for="advantages-form">Блок преимуществ</label>
+              </li>
+              <li>
+                <input id="news-form" type="checkbox" name="news" checked>
+                <label for="news-form">Новости</label>
+              </li>
+              <li>
+                <input id="gallery-form" type="checkbox" name="gallery">
+                <label for="gallery-form">Галерея</label>
+              </li>
+              <li>
+                <input id="cart-form" type="checkbox" name="cart">
+                <label for="cart-form">Корзина</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit" name="button">Показать</button>
+        </form>
+      </section>
+      <section>
         <h2>Образцы шаблонов</h2>
         <ul>
           <li>
@@ -89,6 +137,24 @@
       </section>
     </main>
     <footer>
+      <section>
+        <h2>Напишите нам</h2>
+        <form class="" action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label for="applicant-name">Ваше имя:</label>
+            <input id="applicant-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <label for="applicant-email">Ваш e-mail:</label>
+            <input id="applicant-email" type="text" name="email" value="" placeholder="email@example.com">
+          </p>
+          <p>
+            <label for="applicant-text">Текст письма:</label>
+            <input id="applicant-text" type="text" name="" value="" placeholder="В свободной форме">
+          </p>
+          <button type="submit" name="button">Отправить</button>
+        </form>
+      </section>
       <ul>
         <li><a href="#">Вконтакте</a></li>
         <li><a href="#">Фейсбук</a></li>
