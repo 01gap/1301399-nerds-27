@@ -8,6 +8,15 @@
 }
 
 @font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'),
+       url('../fonts/roboto-v20-latin_cyrillic-500.woff2') format('woff2'),
+       url('../fonts/roboto-v20-latin_cyrillic-500.woff') format('woff');
+}
+
+@font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -28,10 +37,9 @@ body {
 
 a {
   text-decoration: none;
-}
-a:visited {
   color: inherit;
 }
+
 .main-navigation,
 .product-list,
 .filter-list,
@@ -41,7 +49,9 @@ a:visited {
 }
 
 .main-navigation a[href]:hover,
-.main-navigation-cart:hover {
+.main-navigation-cart:hover,
+.main-navigation a[href]:focus,
+.main-navigation-cart:focus {
   color: #fb565a;
 }
 .main-navigation a[href]:active,
@@ -49,14 +59,16 @@ a:visited {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.logo:hover {
-  opacity: 80%;
+.logo:hover,
+.logo:focus {
+  opacity: 0.8;
 }
 .logo:active {
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .main-header {
+  font-weight: 500;
   background-color: #eeeeee;
 }
 
@@ -74,15 +86,24 @@ a:visited {
 
 }
 
-.quasi-button-sites {
+[class*="button"] {
+  font: inherit;
+  color: #ffffff;
+  font-weight: 500;
   text-transform: uppercase;
   text-align: center;
-  color: #ffffff;
+}
 
+[class*="button-grey"] {
+  color: inherit;
+}
+
+.quasi-button-sites {
   background-color: #fb565a;
 }
 
-.quasi-button-sites:hover {
+.quasi-button-sites:hover,
+.quasi-button-sites:focus {
   background-color: #e74246;
 }
 
@@ -92,13 +113,11 @@ a:visited {
 }
 
 .quasi-button-apps {
-  text-transform: uppercase;
-  color: #ffffff;
-
   background-color: #00ca74;
 }
 
-.quasi-button-apps:hover {
+.quasi-button-apps:hover,
+.quasi-button-apps:focus {
   background-color: #00bc6c;
 }
 
@@ -108,13 +127,11 @@ a:visited {
 }
 
 .quasi-button-pres {
-  text-transform: uppercase;
-  color: #ffffff;
-
   background-color: #efc84a;
 }
 
-.quasi-button-pres:hover {
+.quasi-button-pres:hover,
+.quasi-button-pres:focus {
   background-color: #eab534;
 }
 
@@ -125,6 +142,7 @@ a:visited {
 
 .catalog-main-title {
   font-size: 55px;
+  font-weight: 500;
   line-height: 55px;
 }
 
@@ -145,21 +163,17 @@ a:visited {
 }
 
 .button-grey-show {
-  font: inherit;
-  text-transform: uppercase;
-  text-align: center;
-  vertical-align: middle;
-
   width: 260px;
-  height: 50px;
+  min-height: 50px;
   background-color: #eeeeee;
   border: none;
 }
 
-.button-grey-show:hover {
+.button-grey-show:hover,
+.button-grey-show:focus {
   background-color: #dfdfdf;
 }
-.button-grey-show:focus {
+.button-grey-show:active {
   color: rgba(0, 0, 0, 0.3);
   background-color: #d5d5d5;
   outline: 0;
@@ -178,7 +192,8 @@ a:visited {
   text-transform: uppercase;
   }
 
-.sample-name:hover {
+.sample-name:hover,
+.sample-name:focus {
   color: #fb565a;
 }
 
@@ -191,12 +206,14 @@ a:visited {
 }
 
 .sample-price {
+  font-weight: 500;
   text-transform: uppercase;
   color: #ffffff;
   background-color: #fb565a;
 }
 
-.sample-price:hover {
+.sample-price:hover,
+.sample-price:focus {
   background-color: #e74246;
 }
 
