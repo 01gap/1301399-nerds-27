@@ -8,170 +8,181 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header">
-      <nav>
-        <a class="logo" href="index.html">
-          <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии «Нёрдс»">
-        </a>
-        <ul class="main-navigation">
-          <li><a href="#">Студия</a></li>
-          <li><a href="#">Клиенты</a></li>
-          <li><a>Магазин</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-        <a class="main-navigation-cart" href="#">Корзина</a>
-
-      </nav>
-    </header>
-    <main>
-      <h1 class="catalog-main-title">Магазин готовых шаблонов</h1>
-      <section>
-        <h2>Фильтр шаблонов</h2>
-        <form class="filter" action="https://echo.htmlacademy.ru" method="get">
-          <fieldset>
-            <legend>Сетка:</legend>
-            <ul class="filter-list">
-              <li>
-                <input id="adaptive-form" type="radio" name="greed" value="adaptive" checked>
-                <label for="adaptive-form">Адаптивная</label>
+    <div class="content">
+      <header class="main-header">
+        <div class="main-header-wrapper">
+          <nav class="container">
+            <a href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии «Нёрдс»"></a>
+            <ul class="main-navigation">
+              <li><a href="#">Студия</a></li>
+              <li><a href="#">Клиенты</a></li>
+              <li><a href="catalog.html">Магазин</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+            <a class="main-navigation-cart" href="#">Корзина</a>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <h1 class="catalog-main-title hidden">Магазин готовых шаблонов</h1>
+        <div class="filter-catalog-wrapper">
+          <section class="sample-filter">
+            <h2 class="hidden">Фильтр шаблонов</h2>
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <fieldset class="filter-greed">
+                <legend>Сетка:</legend>
+                <ul class="filter-greed-list">
+                  <li>
+                    <input id="adaptive-form" type="radio" name="greed" value="adaptive" checked>
+                    <label for="adaptive-form">Адаптивная</label>
+                  </li>
+                  <li>
+                    <input id="fixed-form" type="radio" name="greed" value="fixed">
+                    <label for="fixed-form">Фиксированная</label>
+                  </li>
+                  <li>
+                    <input id="elastic-form" type="radio" name="greed" value="elastic">
+                    <label for="elastic-form">Эластичная</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="filter-details">
+                <legend>Особенности:</legend>
+                <ul class="filter-details-list">
+                  <li>
+                    <input id="slider-form" type="checkbox" name="slider" checked>
+                    <label for="slider-form">Слайдер</label>
+                  </li>
+                  <li>
+                    <input id="advantages-form" type="checkbox" name="advantages">
+                    <label for="advantages-form">Блок преимуществ</label>
+                  </li>
+                  <li>
+                    <input id="news-form" type="checkbox" name="news" checked>
+                    <label for="news-form">Новости</label>
+                  </li>
+                  <li>
+                    <input id="gallery-form" type="checkbox" name="gallery">
+                    <label for="gallery-form">Галерея</label>
+                  </li>
+                  <li>
+                    <input id="cart-form" type="checkbox" name="cart">
+                    <label for="cart-form">Корзина</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <button class="button-grey-show" type="submit" name="button">Показать</button>
+            </form>
+          </section>
+          <section class="catalog">
+            <h2 class="hidden">Образцы шаблонов</h2>
+            <ul class="sample-list">
+              <li class="sample-item">
+                <h3>Образец "Sedona"</h3>
+                <img src="img/img-sedona.jpg" width="360" height="576" alt="Sedona - первая страница">
+                <p>
+                  <a class="sample-name" href="#">Sedona</a>
+                  <span class="sample-description">
+                    Информационный сайт для туристов
+                  </span>
+                  <span class="sample-price">9 900 руб.</span>
+                </p>
               </li>
-              <li>
-                <input id="fixed-form" type="radio" name="greed" value="fixed">
-                <label for="fixed-form">Фиксированная</label>
+              <li class="sample-item">
+                <h3>Образец "Pink"</h3>
+                <img src="img/img-pink.jpg" width="360" height="576" alt="Pink - первая страница">
+                <p>
+                  <a class="sample-name" href="#">Pink App</a>
+                  <span class="sample-description">
+                    Продуктовый лендинг приложения для iOS и Android
+                  </span>
+                  <span class="sample-price">9 900 руб.</span>
+                </p>
               </li>
-              <li>
-                <input id="elastic-form" type="radio" name="greed" value="elastic">
-                <label for="elastic-form">Эластичная</label>
+              <li class="sample-item">
+                <h3>Образец "Borodinski"</h3>
+                <img src="img/img-barbershop.jpg" width="360" height="576" alt="Borodinski - первая страница">
+                <p>
+                  <a class="sample-name" href="#">Barbershop</a>
+                  <span class="sample-description">
+                    Сайт салона красоты. Для мужчин, да.
+                  </span>
+                  <span class="sample-price">9 900 руб.</span>
+                </p>
+              </li>
+              <li class="sample-item">
+                <h3>Образец "Mishka"</h3>
+                <img src="img/img-mishka.jpg" width="360" height="576" alt="Mishka - первая страница">
+                <p>
+                  <a class="sample-name" href="#">Mishka</a>
+                  <span class="sample-description">
+                    Интернет-магазин вязаных игрушек
+                  </span>
+                  <span class="sample-price">9 900 руб.</span>
+                </p>
+              </li>
+              <li class="sample-item">
+                <h3>Образец "Aplus"</h3>
+                <img src="img/img-aplus.jpg" width="360" height="576" alt="Aplus - первая страница">
+                <p>
+                  <a class="sample-name" href="#">A Plus</a>
+                  <span class="sample-description">
+                    Лендинг курсов повышения квалификации
+                  </span>
+                  <span class="sample-price">9 900 руб.</span>
+                </p>
+              </li>
+              <li class="sample-item">
+                <h3>Образец "Кваст"</h3>
+                <img src="img/img-kvast.jpg" width="360" height="576" alt="Кваст - первая страница">
+                <p>
+                  <a class="sample-name" href="#">Кваст</a>
+                  <span class="sample-description">
+                    Промо-сайт производителя
+                    крафтового кваса
+                  </span>
+                  <span class="sample-price">9 900 руб.</span>
+                </p>
               </li>
             </ul>
-          </fieldset>
-          <fieldset>
-            <legend>Особенности:</legend>
-            <ul class="filter-list">
-              <li>
-                <input id="slider-form" type="checkbox" name="slider" checked>
-                <label for="slider-form">Слайдер</label>
-              </li>
-              <li>
-                <input id="advantages-form" type="checkbox" name="advantages">
-                <label for="advantages-form">Блок преимуществ</label>
-              </li>
-              <li>
-                <input id="news-form" type="checkbox" name="news" checked>
-                <label for="news-form">Новости</label>
-              </li>
-              <li>
-                <input id="gallery-form" type="checkbox" name="gallery">
-                <label for="gallery-form">Галерея</label>
-              </li>
-              <li>
-                <input id="cart-form" type="checkbox" name="cart">
-                <label for="cart-form">Корзина</label>
-              </li>
-            </ul>
-          </fieldset>
-          <button class="button-grey-show" type="submit" name="button">Показать</button>
-        </form>
-      </section>
-      <section>
-        <h2>Образцы шаблонов</h2>
-        <ul class="sample-list">
-          <li>
-            <h3>Образец "Sedona"</h3>
-            <img src="img/img-sedona.jpg" width="360" height="576" alt="Sedona - первая страница">
+          </section>
+        </div>
+      </main>
+      <footer>
+        <section>
+          <h2>Напишите нам</h2>
+          <form class="" action="https://echo.htmlacademy.ru" method="post">
             <p>
-              <a class="sample-name" href="#">Sedona</a>
-              <span class="sample-description">
-                Информационный сайт для туристов
-              </span>
-              <span class="sample-price">9 900 руб.</span>
+              <label for="applicant-name">Ваше имя:</label>
+              <input id="applicant-name" type="text" name="name" value="" placeholder="Имя Фамилия">
             </p>
-          </li>
-          <li>
-            <h3>Образец "Pink"</h3>
-            <img src="img/img-pink.jpg" width="360" height="576" alt="Pink - первая страница">
             <p>
-              <a class="sample-name" href="#">Pink App</a>
-              <span class="sample-description">
-                Продуктовый лендинг приложения для iOS и Android
-              </span>
-              <span class="sample-price">9 900 руб.</span>
+              <label for="applicant-email">Ваш e-mail:</label>
+              <input id="applicant-email" type="text" name="email" value="" placeholder="email@example.com">
             </p>
-          </li>
-          <li>
-            <h3>Образец "Borodinski"</h3>
-            <img src="img/img-barbershop.jpg" width="360" height="576" alt="Borodinski - первая страница">
             <p>
-              <a class="sample-name" href="#">Barbershop</a>
-              <span class="sample-description">
-                Сайт салона красоты. Для мужчин, да.
-              </span>
-              <span class="sample-price">9 900 руб.</span>
+              <label for="applicant-text">Текст письма:</label>
+              <textarea id="applicant-text" name="comment" rows="8" cols="80" placeholder="В свободной форме"></textarea>
             </p>
-          </li>
-          <li>
-            <h3>Образец "Mishka"</h3>
-            <img src="img/img-mishka.jpg" width="360" height="576" alt="Mishka - первая страница">
-            <p>
-              <a class="sample-name" href="#">Mishka</a>
-              <span class="sample-description">
-                Интернет-магазин вязаных игрушек
-              </span>
-              <span class="sample-price">9 900 руб.</span>
-            </p>
-          </li>
-          <li>
-            <h3>Образец "Aplus"</h3>
-            <img src="img/img-aplus.jpg" width="360" height="576" alt="Aplus - первая страница">
-            <p>
-              <a class="sample-name" href="#">A Plus</a>
-              <span class="sample-description">
-                Лендинг курсов повышения квалификации
-              </span>
-              <span class="sample-price">9 900 руб.</span>
-            </p>
-          </li>
-          <li>
-            <h3>Образец "Кваст"</h3>
-            <img src="img/img-kvast.jpg" width="360" height="576" alt="Кваст - первая страница">
-            <p>
-              <a class="sample-name" href="#">Кваст</a>
-              <span class="sample-description">
-                Промо-сайт производителя
-                крафтового кваса
-              </span>
-              <span class="sample-price">9 900 руб.</span>
-            </p>
-          </li>
-        </ul>
-      </section>
-    </main>
-    <footer>
-      <section>
-        <h2>Напишите нам</h2>
-        <form class="" action="https://echo.htmlacademy.ru" method="post">
-          <p>
-            <label for="applicant-name">Ваше имя:</label>
-            <input id="applicant-name" type="text" name="name" value="" placeholder="Имя Фамилия">
-          </p>
-          <p>
-            <label for="applicant-email">Ваш e-mail:</label>
-            <input id="applicant-email" type="text" name="email" value="" placeholder="email@example.com">
-          </p>
-          <p>
-            <label for="applicant-text">Текст письма:</label>
-            <textarea id="applicant-text" name="comment" rows="8" cols="80" placeholder="В свободной форме"></textarea>
-          </p>
-          <button type="submit" name="button">Отправить</button>
-        </form>
-      </section>
-      <ul class="social-media-list">
-        <li><a href="#">Вконтакте</a></li>
-        <li><a href="#">Фейсбук</a></li>
-        <li><a href="#">Инстаграм</a></li>
-      </ul>
-      <p class="let-us">Давайте дружить, это выгодно!</p>
-      <p class="discount">Скидка 10% для друзей из социальных сетей.</p>
-    </footer>
+            <button type="submit" name="button">Отправить</button>
+          </form>
+        </section>
+        <div class="footer-bottom-wrapper">
+          <div class="footer-bottom">
+            <div class="social-list-wrapper">
+              <ul class="social-list">
+                <li><a href="#">Вконтакте</a></li>
+                <li><a href="#">Фейсбук</a></li>
+                <li><a href="#">Инстаграм</a></li>
+              </ul>
+            </div>
+            <div class="footer-promotion">
+              <p class="let-us">Давайте дружить, это выгодно!</p>
+              <p class="discount">Скидка 10% для друзей из социальных сетей.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
