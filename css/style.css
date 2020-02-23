@@ -44,60 +44,61 @@ body {
   outline: 2px dotted green;
 }
 
-.hidden {
-  display: none;
-}
 .sample-list h3 {
   display: none;
 }
 .main-header {
-  /*display: flex;*/
-  min-height: 132px;
-  align-items: center;
+  /*min-height: 132px;*/
 
   outline: 3px solid red;
 }
 
-/*.main-header-wrapper,
-.product-list-wrapper,
-.footer-bottom-wrapper {
-   width: 1440px;
-  outline: 2px dotted green;
 
-}*/
-
-.container {
+.navigation-container {
   display: flex;
+  flex-wrap: wrap;
   width: 1160px;
-  min-height: 65px;
+  /*min-height: 65px;*/
   margin: 0 auto;
 
 
   outline: 4px dashed orange;
   outline-offset: 1px;
 
-  justify-content: space-between;
+
 }
 
 .main-navigation {
   display: flex;
+
   align-items: flex-start;
   padding: 0;
   margin: 0;
-  width: 434px;
+  width: 482px;  /*434+48 */
 
+}
+
+.main-navigation a {
+
+  display: block;
+  padding-top: 34px;
+  padding-bottom: 18px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
 
   justify-content: space-between;
   outline: 3px solid yellow;
 }
 
+.main-navigation a {
 
+}
 
 .product-list {
-  /* any need of a wrapper ? */
   display: flex;
   width: 1100px;
-  min-height: 366px;
+  /*min-height: 366px;*/
 
   margin: 0;
   padding: 0;
@@ -113,15 +114,12 @@ body {
 
 .product-item {
   width: 300px;
-  min-height: 366px;
-
-
 }
 
 .footer-bottom {
   display: flex;
   width: 940px;
-  min-height: 79px;
+  /*min-height: 79px;*/
 
   outline: 3px solid red;
 
@@ -140,7 +138,7 @@ body {
 .filter-catalog-wrapper {
   display: flex;
   width: 1160px;
-  min-height: 1928px;
+  /*min-height: 1928px;*/
 
   justify-content: space-between;
 
@@ -153,22 +151,19 @@ body {
 
 .sample-filter {
   width: 260px;
-  min-height: 508px;
 
   outline: 3px solid orange;
-  mar
 }
-
 
 .catalog {
   width: 760px;
-  min-height: 1928px;
+  /*min-height: 1928px;*/
 }
 .sample-list {
   display: flex;
   flex-wrap: wrap;
   width: 760px;
-  min-height: 1928px;
+  /*min-height: 1928px;*/
 
   justify-content: space-between;
 
@@ -178,7 +173,7 @@ body {
   padding: 0;
 }
 
-.filter-greed {
+.filter-grid {
   margin-bottom: 51px;
 }
 
@@ -188,7 +183,7 @@ body {
 
 .sample-item {
   width: 360px;
-  min-height: 616px;
+  /*min-height: 616px;*/
   margin-bottom: 40px;
 
   outline: 2px dashed orange;
@@ -206,14 +201,14 @@ a {
 
 .main-navigation,
 .product-list,
-.filter-greed-list,
+.filter-grid-list,
 .filter-details-list,
 .sample-list,
 .social-list {
   list-style: none;
 }
 
-.filter-greed-list,
+.filter-grid-list,
  .filter-details-list {
   margin: 0;
   padding: 0;
@@ -322,7 +317,7 @@ fieldset {
   padding: 0;
 }
 
-.filter-greed legend,
+.filter-grid legend,
 .filter-details legend {
   font-size: 18px;
   font-weight: 700;
@@ -330,7 +325,7 @@ fieldset {
   text-transform: uppercase;
 }
 
-.filter-greed label,
+.filter-grid label,
 .filter-details label {
   line-height: 20px;
   color: #283136;
