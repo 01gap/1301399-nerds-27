@@ -312,7 +312,6 @@ a {
 }
 
 
-
 .sample-item {
   position: relative;
 
@@ -529,8 +528,8 @@ fieldset {
 }
 
 /* выбор между доступностью и соответствием стайлгайду: */
-.radio + label:hover::before /*,
-.radio:focus + label::before */ {
+.radio + label:hover::before,
+.radio:focus + label::before {
   opacity: 1;
 }
 
@@ -549,8 +548,8 @@ fieldset {
   opacity: 0.4;
 }
 
-.radio:checked + label:hover::after /*,
-.radio:checked:focus + label::after */ {
+.radio:checked + label:hover::after,
+.radio:checked:focus + label::after {
   opacity: 1;
 }
 
@@ -586,8 +585,8 @@ fieldset {
   opacity: 0;
 }
 
-.checkbox + label:hover::before /*,
-.checkbox:focus + label::before */{
+.checkbox + label:hover::before,
+.checkbox:focus + label::before {
   opacity: 1;
 }
 
@@ -605,8 +604,8 @@ fieldset {
   opacity: 0.4;
 }
 
-.checkbox:checked + label:hover::after /*,
-.checkbox:checked:focus + label::after */ {
+.checkbox:checked + label:hover::after,
+.checkbox:checked:focus + label::after {
   opacity: 1;
 }
 
