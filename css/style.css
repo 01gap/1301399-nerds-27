@@ -86,7 +86,7 @@ a {
   align-items: flex-start;
   padding: 0;
   margin: 0;
-  width: 438px;  /*434?+48 = 482 (for margins)*/
+  width: 438px;
   justify-content: space-between;
 }
 
@@ -117,7 +117,7 @@ a {
 
   width: 15px;
   height: 15px;
-  background-image: url("cart-icon.svg");
+  background-image: url("../img/cart-icon.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 
@@ -167,22 +167,66 @@ a {
   display: flex;
   flex-wrap: wrap;
   width: 1160px;
-  /*min-height: 366px;*/
 
   margin: 0;
   padding: 0;
 
-  outline: 3px solid red;
-
+  /*outline: 3px solid red;*/
 }
 
 .product-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   width: 300px;
   margin-right: 100px;
 }
 
+.product-list h3 {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 30px;
+
+  margin: 0;
+  padding: 0;
+
+}
+
+
+.product-item :nth-child(2) {
+  order: 1;
+  margin-bottom: 25px;
+}
+
+.product-item :nth-child(1) {
+  order: 2;
+
+  margin-bottom: 19px;
+}
+
+.product-item :nth-child(3) {
+  order: 3;
+  margin-right: 55px;
+  align-self: auto;
+}
+
+.product-item :nth-child(4) {
+  order: 4;
+}
+
 .product-item:nth-child(3n+0) {
   margin-right: 0;
+}
+
+.product-description {
+  color: #283136;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  margin-bottom: 30px;
+
+
 }
 
 
@@ -248,18 +292,17 @@ a {
 
 
 .filter-grid {
-  margin-bottom: 51px;
+  margin-bottom: 26px;
 }
 
 .filter-details {
-  margin-bottom: 48px;
+  margin-bottom: 30px;
 }
 
 .sample-list {
   display: flex;
   flex-wrap: wrap;
   width: 760px;
-  /*min-height: 1928px;*/
 
   justify-content: space-between;
   outline: 3px solid red;
@@ -269,11 +312,11 @@ a {
 }
 
 
+
 .sample-item {
   position: relative;
 
   width: 360px;
-  /*margin-bottom: 40px; */
   margin-bottom: 33px;
   padding-top: 40px;
 
@@ -286,7 +329,7 @@ a {
   top: 0;
   left: 0;
 
-  background-image: url("browser.svg");
+  background-image: url("../img/browser.svg");
   width: 360px;
   height: 40px;
   background-repeat: no-repeat;
@@ -305,13 +348,7 @@ a {
   padding: 0;
 }
 
-.product-list h3 {
-  font-size: 24px;
-  text-transform: uppercase;
-  font-weight: 700;
-  line-height: 30px;
 
-}
 
 /* ALL of the buttons below*/
 
@@ -330,6 +367,7 @@ a {
 
 a.button {
   display: inline-block;
+  vertical-align: top;
   cursor: default;
 }
 
@@ -355,6 +393,17 @@ a.button {
   color: rgba(0, 0, 0, 0.3);
   background-color: #d5d5d5;
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+}
+
+.product-button {
+  cursor: default;
+  display: inline-block;
+  vertical-align: top;
+
+  padding-top: 17px;
+  padding-bottom: 15px;
+  padding-left: 39px;
+  padding-right: 39px;
 }
 
 .product-button:active {
@@ -399,6 +448,8 @@ a.button {
   }
 
 .social-button {
+  cursor: default;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -442,19 +493,124 @@ fieldset {
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
-.filter-grid label,
-.filter-details label {
+.filter-option label {
   line-height: 20px;
   color: #283136;
 }
 
+.filter-option {
+  padding-left: 37px;
+}
+
+.filter-option label {
+  position: relative;
+  display: block;
+  user-select: none;
+
+  margin-bottom: 20px;
+}
+
+.radio + label::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -35px;
+  width: 25px;
+  height: 25px;
+
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.4;
+}
+
+/* выбор между доступностью и соответствием стайлгайду: */
+.radio + label:hover::before /*,
+.radio:focus + label::before */ {
+  opacity: 1;
+}
 
 
+.radio:checked + label::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -35px;
+  width: 25px;
+  height: 25px;
 
+  background-image: url("../img/radio-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.4;
+}
 
-.sample-list p {
+.radio:checked + label:hover::after /*,
+.radio:checked:focus + label::after */ {
+  opacity: 1;
+}
+
+.radio:checked + label::before {
+  opacity: 0;
+}
+
+.radio:disabled + label::before,
+.checkbox:disabled + label::before {
+  opacity: 0.1;
+}
+
+.radio:disabled + label
+.checkbox:disabled + label {
+  color: rgba(40, 49, 54, 0.3);
+}
+
+.checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: -2px;
+  width: 23px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.4;
+}
+
+.checkbox:checked + label::before {
+  opacity: 0;
+}
+
+.checkbox + label:hover::before /*,
+.checkbox:focus + label::before */{
+  opacity: 1;
+}
+
+.checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: -2px;
+  width: 27px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.4;
+}
+
+.checkbox:checked + label:hover::after /*,
+.checkbox:checked:focus + label::after */ {
+  opacity: 1;
+}
+
+.sample-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -467,10 +623,16 @@ fieldset {
 
 .sample-name {
   display: inline-block;
+  vertical-align: top;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
+
+  margin-top: 12px;
+  margin-bottom: 2px;
+  padding-bottom: 15px;
+  padding-top: 15px;
   }
 
 .sample-name:hover,
@@ -483,14 +645,23 @@ fieldset {
 }
 
 .sample-description {
-  margin-left: 67px;
-  margin-right: 67px;
   color: #666666;
+
+  margin-top: 0;
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-bottom: 28px;
+  padding: 0;
+
 }
 
 .sample-price {
   cursor: default;
   display: inline-block;
+  vertical-align: top;
+
+  margin-top: auto;
+  margin-bottom: 30px;
   padding-left: 62px;
   padding-right: 60px;
   padding-top: 16px;
