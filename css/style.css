@@ -44,6 +44,7 @@ a {
 }
 
 .main-navigation,
+.slider-list,
 .product-list,
 .filter-grid-list,
 .filter-details-list,
@@ -160,6 +161,30 @@ a {
   text-transform: uppercase;
 }
 
+/* slider */
+
+.slider-list {
+  padding: 0;
+  margin: 0;
+}
+
+.slider-list li {
+  display: flex;
+}
+
+.slider-list h2 {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+}
+
+.slide-caption {
+  z-index: 2;
+}
+
+.slider-list img {
+  z-index: 1;
+}
 
 /* main-page slyles below */
 
@@ -170,9 +195,9 @@ a {
 
   margin: 0;
   padding: 0;
-
-  /*outline: 3px solid red;*/
 }
+
+
 
 .product-list li {
   display: flex;
@@ -231,6 +256,146 @@ a {
 
 
 /* footer styles below */
+.write-us {
+  position: fixed;
+  bottom: 180px;
+  right: 50%;
+
+  margin-right: -480px;
+
+  color: inherit;
+  background-color: #ffffff;
+  box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
+
+  width: 760px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 67px;
+  padding-bottom: 84px;
+}
+
+
+.modal-close {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  top: 78px;
+  right: 90px;
+
+  width: 21px;
+  height: 21px;
+
+
+  background-color: #ffffff;
+  background-image: url("../img/close-cross.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+
+  border: 0;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  opacity: 1;
+}
+
+.modal-close:active {
+  opacity: 0.1;
+}
+
+.write-us h2 {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+
+  margin: 0;
+  margin-bottom: 41px;
+
+}
+
+.input-fields {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 760px;
+}
+
+.input-fields p {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+}
+
+.input-fields label {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.input-fields input,
+.input-fields textarea {
+  font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000000;
+
+  margin-bottom: 32px;
+}
+
+.input-fields input {
+  box-sizing: border-box;
+  width: 360px;
+  min-height: 50px;
+  padding: 14px;
+  border: 2px solid #d7dcde;
+}
+
+.input-fields textarea {
+  box-sizing: border-box;
+  width: 760px;
+  height: 114px;
+  padding: 14px;
+  resize: none;
+  border: 2px solid #d7dcde;
+}
+
+.input-fields input:hover,
+.input-fields textarea:hover {
+  border: 2px solid #b4b9bb;
+}
+
+.input-fields input:focus,
+.input-fields textarea:focus {
+  border: 2px solid #000000;
+}
+
+.input-fields input:focus::placeholder,
+.input-fields textarea:focus::placeholder {
+  color: #444444;
+}
+
+.input-fields input:invalid {
+  border: 2px solid #e74246;
+}
+
+.input-fields input:invalid::placeholder {
+  color: #e74246;
+}
+
+.input-fields input::placeholder,
+.input-fields textarea::placeholder {
+  font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: rgba(68, 68, 68, 0.5);
+}
+
+
+
 
 .footer-bottom {
   display: flex;
@@ -444,7 +609,19 @@ a.button {
 
 .button-show:active {
   outline: 0;
-  }
+}
+
+.button-send {
+  width: 260px;
+  min-height: 50px;
+  border: none;
+}
+
+.button-send:active {
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  outline: 0;
+}
 
 .social-button {
   cursor: default;
