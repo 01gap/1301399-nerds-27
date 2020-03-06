@@ -9,9 +9,6 @@
     <header class="main-header">
       <div class="content">
         <nav class="navigation-container">
-          <!-- можно/нужно ли оставлять на главной странице ссылку на нее же
-          по клику на логотип в хедере? мне как пользователю обычно нравится
-          такой способ обновления страницы-->
           <a class="logo" href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии «Нёрдс»"></a>
           <ul class="main-navigation">
             <li><a href="#">Студия</a></li>
@@ -25,50 +22,42 @@
     </header>
     <main>
       <h1 class="hidden main-title">Студия "Нёрдс"</h1>
-      <section class="slider">
+      <section class="grey-background">
         <div class="content">
           <ul class="slider-list">
-            <li>
-              <div class="slide-caption">
-                <h2>
-                  Долго, дорого, <br>
-                  cкрупулезно.
-                </h2>
-                <p>
-                  Математически выверенный дизайн<br>
-                  для вашего сайта или мобильного приложения.
-                </p>
-                <a class="button red know-more" href="#">Узнать больше</a>
-              </div>
-            <!--  <img src="img/slide-picture1.png" alt="Три смартфона в разных ракурсах" width="698" height="413"> -->
+            <li class="slide1">
+              <h2>
+                Долго, дорого, <br>
+                cкрупулезно.
+              </h2>
+              <p>
+                Математически выверенный дизайн<br>
+                для вашего сайта или мобильного приложения.
+              </p>
+              <a class="button red know-more" href="#">Узнать больше</a>
             </li>
-            <li>
-              <div class="slide-caption">
-                <h2>
-                  Любим математику <br>
-                  как никто другой
-                </h2>
-                <p>
-                  Никакого креатива, только математические формулы <br>
-                  для расчета идеальных пропорций.
-                </p>
-                <a class="button red know-more" href="#">Узнать больше</a>
-              </div>
-              <!--<img src="img/slide-picture2.png" alt="Два монитора, стоящие тыльной стороной друг к другу" width="663" height="430"> -->
+            <li class="slide2">
+
+              <h2>
+                Любим математику <br>
+                как никто другой
+              </h2>
+              <p>
+                Никакого креатива, только математические формулы <br>
+                для расчета идеальных пропорций.
+              </p>
+              <a class="button red know-more" href="#">Узнать больше</a>
             </li>
-            <li>
-              <div class="slide-caption">
-                <h2>
-                  Только ночь,<br>
-                  только хардкор
-                </h2>
-                <p>
-                  Работать днем, как все? Мы против этого. <br>
-                  Ближе к полуночи работа только начинается.
-                </p>
-                <a class="button red know-more" href="#">Узнать больше</a>
-              </div>
-              <!--  <img src="img/slide-picture3.png" alt="Планшет iPad и смартфон iPhone" width="759" height="411"> -->
+            <li class="slide3">
+              <h2>
+                Только ночь,<br>
+                только хардкор
+              </h2>
+              <p>
+                Работать днем, как все? Мы против этого. <br>
+                Ближе к полуночи работа только начинается.
+              </p>
+              <a class="button red know-more" href="#">Узнать больше</a>
             </li>
           </ul>
         </div>
@@ -120,7 +109,7 @@
         <div class="studio-figures">
           <p>С 2004 года любим точность во всем:</p>
           <ul>
-            <li><span class="figures-bold">146<sup>%</sup></span> Уровень самоотдачи</li>
+            <li><span class="figures-bold">146<span class="figures-super">%</span></span> Уровень самоотдачи</li>
             <li><span class="figures-bold">100<span class="figures-super">%</span></span> Соблюдение сроков</li>
             <li><span class="figures-bold">50<span class="figures-super">%</span></span> Минимальная предоплата</li>
           </ul>
@@ -153,22 +142,35 @@
       </section>
     </main>
     <footer class="content">
-      <section>
+      <section class="address-section">
+        <div class="address">
+          <h2 class="hidden">Наш адрес</h2>
+          <p>Nërds design studio</p>
+          <p>191186, Санкт-Петербург, ул.&nbsp;Б. Конюшенная, д. 19/8</p>
+          <p>тел. +7 (812) 275-75-75</p>
+          <a class="button red write-us-button" href="#">Напишите нам</a>
+        </div>
+        <img src="img/map-with-marker.jpg" alt="Карта с офисом по адресу: Санкт-Петербург ул. Большая Конюшенная, дом 19/8" width="1160" height="416">
+      </section>
+      <section class="write-us-pop-up">
         <h2>Напишите нам</h2>
-        <form class="" action="https://echo.htmlacademy.ru" method="post">
-          <p>
-            <label for="applicant-name">Ваше имя:</label>
-            <input id="applicant-name" type="text" name="name" value="" placeholder="Имя Фамилия">
-          </p>
-          <p>
-            <label for="applicant-email">Ваш e-mail:</label>
-            <input id="applicant-email" type="text" name="email" value="" placeholder="email@example.com">
-          </p>
-          <p>
-            <label for="applicant-text">Текст письма:</label>
-            <textarea id="applicant-text" name="comment" rows="8" cols="80" placeholder="В свободной форме"></textarea>
-          </p>
-          <button class="button" type="submit" name="button">Отправить</button>
+        <button class="modal-close" type="button" name="button"></button>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <div class="input-fields">
+            <p>
+              <label for="applicant-name">Ваше имя:</label>
+              <input id="applicant-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+            </p>
+            <p>
+              <label for="applicant-email">Ваш e-mail:</label>
+              <input id="applicant-email" type="text" name="email" value="" placeholder="email@example.com">
+            </p>
+            <p>
+              <label for="applicant-text">Текст письма:</label>
+              <textarea id="applicant-text" name="comment" rows="5" cols="30" placeholder="В свободной форме"></textarea>
+            </p>
+          </div>
+          <button class="button red button-send" type="submit" name="button">Отправить</button>
         </form>
       </section>
       <div class="footer-bottom">

@@ -50,8 +50,11 @@ a {
 .clients-logo-list,
 .filter-grid-list,
 .filter-details-list,
+.sorting-down-up,
 .sample-list,
-.social-list {
+.pagination-list,
+.social-list,
+.sorting-modes {
   list-style: none;
 }
 
@@ -76,9 +79,9 @@ a {
   margin-left: auto;
   margin-right: auto;
   padding-top: 49px;
-
+/*
   outline: 4px dashed orange;
-  outline-offset: 1px;
+  outline-offset: 1px;*/
 }
 
 .main-navigation {
@@ -95,7 +98,7 @@ a {
 .main-navigation-cart {
 
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 0;
 
   padding-top: 26px;
   padding-bottom: 3px;
@@ -167,35 +170,61 @@ a {
   font-size: 0;
 }
 
-.slider {
+.grey-background {
   background-color: #eeeeee;
 }
 .slider-list {
   padding: 0;
   margin: 0;
-  max-width: 1160px;
+  width: 1160px;
 }
 
 .slider-list li {
   width: 1160px;
-  outline: 2px dashed red;
+  /*outline: 2px dashed red;*/
 }
 
-.slide-caption h2 {
+.slider-list h2 {
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
 
   margin: 0;
   padding: 0;
+  padding-top: 74px;
+  padding-bottom: 26px;
 }
 
-.slide-caption p {
+.slider-list p {
   line-height: 24px;
   color: #283136;
+
+  margin: 0;
+  padding: 0;
+  padding-bottom: 40px;
 }
 
+.slider-list a {
+  margin-bottom: 80px;
+}
 
+.slide1 {
+  background-image: url("../img/slide-picture1.png");
+  background-repeat: no-repeat;
+  background-position: 431px bottom;
+}
+
+.slide2 {
+  background-image: url("../img/slide-picture2.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.slide3 {
+  background-image: url("../img/slide-picture3.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
 
 /* main-page slyles below */
 
@@ -205,7 +234,11 @@ a {
   width: 1160px;
 
   margin: 0;
+  margin-top: 80px;
+
   padding: 0;
+  padding-bottom: 80px;
+  border-bottom: 2px solid #eeeeee;
 }
 
 
@@ -252,8 +285,12 @@ a {
 
 .studio-description {
   display: flex;
-  flex-flow: wrap;
+  flex-wrap: wrap;
   justify-content: space-between;
+
+  margin-top: 40px;
+  padding-bottom: 73px;
+  border-bottom: 2px solid #eeeeee;
 }
 
 .studio-description-intro {
@@ -307,6 +344,8 @@ a {
 .studio-figures ul {
   display: flex;
   flex-wrap: wrap;
+  align-content: stretch;
+
   width: 360px;
   justify-content: space-between;
   color: #283136;
@@ -317,14 +356,17 @@ a {
 }
 
 .figures-bold {
+  display: inline-block;
   color: #000000;
   font-size: 45px;
   line-height: 10px;
   font-weight: 700;
+
+  padding-bottom: 30px;
 }
 
 .figures-super {
-  font-size: 28px;
+  font-size: 24px;
   vertical-align: super;
 }
 
@@ -332,10 +374,17 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: flex-start;
+
 
   margin: 0;
+  margin-top: 46px;
   padding: 0;
+  padding-bottom: 44px;
+  border-bottom: 2px solid #eeeeee;
+}
+
+.clients-logo-list li {
+  align-self: center;
 }
 
 .clients-logo-list img {
@@ -352,13 +401,58 @@ a {
 }
 
 /* footer styles below */
-.write-us {
-  display: none;
+
+.address-section {
+  position: relative;
+}
+
+.address p {
+  color: #666666;
+  margin: 0;
+  padding: 0;
+}
+
+.address {
+  position: absolute;
+  top: 54px;
+  left: 0;
+
+  width: 220px;
+  padding: 48px 51px;
+  background-color: #ffffff;
+
+  outline: 2px dotted orange;
+}
+
+.address *:nth-child(2) {
+  color: inherit;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  padding-bottom: 22px;
+}
+
+.address *:nth-child(3) {
+  padding-bottom: 18px;
+}
+
+.address *:nth-child(4) {
+  padding-bottom: 37px;
+}
+
+.address-section img {
+  margin-bottom: 62px;
+}
+
+.write-us-pop-up {
+
   position: fixed;
-  bottom: 180px;
+  bottom: 190px;
   right: 50%;
 
-  margin-right: -480px;
+  margin-right: -481px;
 
   color: inherit;
   background-color: #ffffff;
@@ -401,7 +495,7 @@ a {
   opacity: 0.1;
 }
 
-.write-us h2 {
+.write-us-pop-up h2 {
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
@@ -438,23 +532,25 @@ a {
   line-height: 18px;
   color: #000000;
 
-  margin-bottom: 32px;
+  margin-bottom: 34px;
 }
 
 .input-fields input {
   box-sizing: border-box;
   width: 360px;
   min-height: 50px;
-  padding: 14px;
+  padding: 13px;
   border: 2px solid #d7dcde;
 }
 
 .input-fields textarea {
   box-sizing: border-box;
   width: 760px;
-  height: 114px;
-  padding: 14px;
+  height: 117px;
+  padding: 10px 13px;
   resize: none;
+
+  margin-bottom: 47px;
   border: 2px solid #d7dcde;
 }
 
@@ -493,8 +589,6 @@ a {
 }
 
 
-
-
 .footer-bottom {
   display: flex;
   width: 1160px;
@@ -502,8 +596,6 @@ a {
 
   outline: 3px solid red;
 }
-
-
 
 .let-us,
 .discount,
@@ -551,6 +643,9 @@ a {
 
   margin: 0;
   padding: 0;
+  padding-top: 74px;
+  padding-bottom: 108px;
+  margin-bottom: 55px;
 }
 
 .filter-catalog-wrapper {
@@ -558,6 +653,8 @@ a {
   width: 1160px;
 
   justify-content: space-between;
+
+  margin-bottom: 50px;
 
   outline: 4px dashed green;
   outline-offset: 3px;
@@ -569,13 +666,7 @@ a {
 }
 
 
-.filter-grid {
-  margin-bottom: 26px;
-}
 
-.filter-details {
-  margin-bottom: 30px;
-}
 
 .sample-list {
   display: flex;
@@ -586,7 +677,9 @@ a {
   outline: 3px solid red;
 
   margin: 0;
+  margin-bottom: 60px;
   padding: 0;
+
 }
 
 
@@ -736,13 +829,61 @@ a.button {
   padding-left: 54px;
   padding-right: 54px;
   padding-top: 17px;
-  padding-bottom: 15px;
+  padding-bottom: 17px;
 }
 
-.know-more:active {
+.know-more:active,
+.write-us-button:active {
   color: rgba(255, 255, 255, 0.3);
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
 }
+
+.write-us-button {
+  padding-top: 17px;
+  padding-bottom: 15px;
+  padding-left: 45px;
+  padding-right: 44px;
+}
+
+.catalog-page-button {
+  display: inline-block;
+  vertical-align: top;
+  cursor: default;
+
+  font: inherit;
+  background-color: #eeeeee;
+
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 17px 21px; /* approx. */
+}
+
+.current-catalog-page {
+  padding: 14px 18px;
+
+  background-color: #ffffff;
+  border: 3px solid #dbdbdb;
+}
+
+/* Это законный прием - выбирать anchor с href для эффектов ховера и нажатия? */
+.pagination-list a[href]:hover,
+.pagination-list a[href]:focus {
+  background-color: #dfdfdf;
+}
+
+.pagination-list a[href]:active {
+  color: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+}
+
+.next-catalog-page {
+  padding-left: 78px;
+  padding-right: 79px;
+  padding-top: 17px;
+  padding-bottom: 15px;
+}
+
+
 
 
 
@@ -810,19 +951,259 @@ a.button {
 
 /* Form styles below*/
 
-fieldset {
-  border: none;
+
+
+.filter-price,
+.filter-grid,
+.filter-details {
   margin: 0;
   padding: 0;
+
+  border: none;
 }
 
+.filter-price legend,
 .filter-grid legend,
-.filter-details legend {
+.filter-details legend,
+.filter-sort-by p {
   font-size: 18px;
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
+  margin-bottom: 17px;
+}
+.filter-price {
+  margin-bottom: 56px;
+}
+
+.filter-grid {
+  margin-bottom: 25px;
+}
+
+.filter-details {
+  margin-bottom: 30px;
+}
+.filter-price legend {
+  margin-bottom: 48px;
+}
+
+.range-controls {
+  position: relative;
+
+  height: 41px;
   margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  background-color: #f1f1f1;
+
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 30px;
+  left: 0;
+
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 17px;
+}
+
+.range-controls .toggle-max {
+  left: 158px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 8px 10px;
+  margin-left: 10px;
+
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #283136;
+
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+/* Годится ли этот способ отключения стрелок в инпутах? */
+/* Chrome, Safari, Edge, Opera */
+.price-controls input::-webkit-outer-spin-button,
+.price-controls input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.price-controls input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.max-price {
+  text-align: right;
+}
+
+.filter-sort-by {
+
+  display: flex;
+  justify-content: space-between;
+
+  width: 760px;
+}
+
+
+.sorting-modes {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+
+  font-size: 14px;
+  text-transform: uppercase;
+
+  margin: 0;
+  padding: 0;
+
+}
+
+.sorting-modes a {
+  display: block;
+
+  margin-right: 27px;
+  padding-top: 7px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sorting-modes a:hover,
+.sorting-modes a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* можно ли использовать класс current в главном меню (для активной страницы) здесь,
+и задавать при этом разную стилизацию с его помощью? или лучше
+задавать им уникальные имена? */
+.sorting-modes a:active,
+.sorting-modes a.current {
+  color: #000000;
+}
+
+.sorting-modes a.current:hover {
+  cursor: default;
+}
+
+
+
+.filter-sort-by p {
+  min-width: 160px;
+  margin: 0;
+  margin-bottom: 56px;
+  padding: 0;
+}
+
+.sorting-down-up {
+
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 40px;
+  justify-content: space-between;
+
+
+  margin: 0;
+  padding: 0;
+}
+
+.sorting-down,
+.sorting-up {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 11px;
+  height: 10px;
+
+  padding-top: 7px;
+
+
+}
+
+.sorting-down::before {
+  content: "";
+  position: absolute;
+
+
+
+  width: 11px;
+  height: 10px;
+  background-image: url("../img/icon-down-dir.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.2;
+}
+
+.sorting-up::before {
+  content: "";
+  position: absolute;
+
+
+  width: 11px;
+  height: 10px;
+  background-image: url("../img/icon-up-dir.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.2;
+}
+
+.sorting-down:hover::before,
+.sorting-up:hover::before,
+.sorting-down:focus::before,
+.sorting-up:focus::before {
+  opacity: 0.4;
+}
+
+.sorting-down:active::before,
+.sorting-up:active::before {
+  opacity: 1;
 }
 
 .filter-option label {
@@ -845,7 +1226,7 @@ fieldset {
 .radio + label::before {
   content: "";
   position: absolute;
-  top: -2px;
+  top: -4px;
   left: -35px;
   width: 25px;
   height: 25px;
@@ -857,7 +1238,6 @@ fieldset {
   opacity: 0.4;
 }
 
-/* выбор между доступностью и соответствием стайлгайду: */
 .radio + label:hover::before,
 .radio:focus + label::before {
   opacity: 1;
@@ -867,7 +1247,7 @@ fieldset {
 .radio:checked + label::after {
   content: "";
   position: absolute;
-  top: -2px;
+  top: -4px;
   left: -35px;
   width: 25px;
   height: 25px;
@@ -955,6 +1335,8 @@ fieldset {
   opacity: 1;
 }
 
+/* sample catalog below */
+
 .sample-item {
   display: flex;
   flex-direction: column;
@@ -1025,6 +1407,14 @@ fieldset {
 .sample-price:active {
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
   background-color: #d7373b;
+}
+
+.pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0;
+  padding: 0;
 }
 
 .let-us {
