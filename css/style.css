@@ -64,7 +64,7 @@ a {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
-  outline: 2px dotted green;
+/*  outline: 2px dotted green; */
 }
 
 .main-header {
@@ -251,23 +251,20 @@ a {
   margin-right: 100px;
 }
 
-.product-list h3 {
+.product-item h3 {
   font-size: 24px;
   text-transform: uppercase;
   font-weight: 700;
   line-height: 30px;
 
   margin: 0;
+  margin-bottom: 17px;
   padding: 0;
 }
 
 .product-item img {
   order: -1;
   margin-bottom: 25px;
-}
-
-.product-item h3 {
-  margin-bottom: 19px;
 }
 
 .product-item:nth-child(3n) {
@@ -279,7 +276,7 @@ a {
   font-size: 16px;
   line-height: 24px;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
   margin-right: 55px;
 }
 
@@ -289,7 +286,7 @@ a {
   justify-content: space-between;
 
   margin-top: 40px;
-  padding-bottom: 73px;
+  padding-bottom: 60px;
   border-bottom: 2px solid #eeeeee;
 }
 
@@ -301,33 +298,20 @@ a {
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
+
+  margin: 0;
+  margin-top: 33px;
+  margin-bottom: 33px;
 }
+
+
 
 .studio-description-intro p,
 .work-we-do ul {
   color: #283136;
   line-height: 24px;
-}
 
-.work-we-do ul {
   margin: 0;
-  padding: 0;
-  padding-left: 27px;
-}
-
-.work-we-do li {
-  position: relative;
-}
-
-.work-we-do li::before {
-  content:"";
-  position: absolute;
-  top: 10px;
-  left: -28px;
-
-  width: 25px;
-  height: 2px;
-  background-color: #fb565a;
 }
 
 .work-we-do p,
@@ -335,10 +319,49 @@ a {
   line-height: 24px;
   text-transform: uppercase;
   font-weight: 700;
+
+  margin: 0;
+  margin-top: 35px;
+  margin-bottom: 24px;
 }
 
+.studio-figures {
+  padding-left: 40px;
+
+}
+
+.work-we-do ul {
+
+  padding: 0;
+  padding-left: 36px;
+}
+
+.work-we-do li {
+  position: relative;
+}
+
+.work-we-do li:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.work-we-do li::before {
+  content:"";
+  position: absolute;
+  top: 11px;
+  left: -35px;
+
+  width: 25px;
+  height: 2px;
+  background-color: #fb565a;
+}
+
+
+
 .studio-figures p {
-  text-align: center;
+text-align: right;
+
+ margin-right: 15px;
+ margin-bottom: 50px;
 }
 
 .studio-figures ul {
@@ -362,32 +385,45 @@ a {
   line-height: 10px;
   font-weight: 700;
 
-  padding-bottom: 30px;
+  padding-bottom: 38px;
 }
 
 .figures-super {
-  font-size: 24px;
+  font-size: 26px;
   vertical-align: super;
+}
+
+.our-clients-container {
+  width: 1198px;
+  margin: 0 auto;
+  padding-left: 1px;
+  padding-right: 1px;
 }
 
 .clients-logo-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
 
 
   margin: 0;
   margin-top: 46px;
   padding: 0;
-  padding-bottom: 44px;
-  border-bottom: 2px solid #eeeeee;
+  padding-bottom: 40px;
+
 }
+
 
 .clients-logo-list li {
-  align-self: center;
+  position: relative;
+  text-align: center;
+
+  width: 25%;
 }
 
+
+
 .clients-logo-list img {
+
   opacity: 0.2;
 }
 
@@ -400,10 +436,40 @@ a {
   opacity: 0.1;
 }
 
+/* есть ли лучший способ вертикального выравнивания логотипов? */
+.clients-logo-list img[src*="htmlacademy-logo"] {
+  padding-top: 16px;
+  padding-bottom: 6px;
+}
+
+.clients-logo-list img[src*="pink-logo"] {
+padding-top: 19px;
+padding-bottom: 19px;
+}
+
+.clients-logo-list img[src*="mishka-logo"] {
+padding-top: 3px;
+padding-bottom: 3px;
+}
+
+.clients-logo-list li:not(:nth-child(4n))::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 298px;
+
+  width: 2px;
+  height: 52px;
+  background-color: #eeeeee;
+}
+
 /* footer styles below */
 
 .address-section {
   position: relative;
+
+  padding-top: 80px;
+  border-top: 2px solid #eeeeee;
 }
 
 .address p {
@@ -414,17 +480,17 @@ a {
 
 .address {
   position: absolute;
-  top: 54px;
+  top: 134px;
   left: 0;
 
   width: 220px;
   padding: 48px 51px;
   background-color: #ffffff;
 
-  outline: 2px dotted orange;
+/*  outline: 2px dotted orange;*/
 }
 
-.address *:nth-child(2) {
+.address .address-title {
   color: inherit;
   font-size: 18px;
   line-height: 30px;
@@ -434,11 +500,11 @@ a {
   padding-bottom: 22px;
 }
 
-.address *:nth-child(3) {
+.address .address-post {
   padding-bottom: 18px;
 }
 
-.address *:nth-child(4) {
+.address .address-tel {
   padding-bottom: 37px;
 }
 
@@ -447,7 +513,7 @@ a {
 }
 
 .write-us-pop-up {
-
+  display: none;
   position: fixed;
   bottom: 190px;
   right: 50%;
@@ -546,11 +612,12 @@ a {
 .input-fields textarea {
   box-sizing: border-box;
   width: 760px;
-  height: 117px;
-  padding: 10px 13px;
-  resize: none;
+  min-height: 117px;
+  max-height: 80vh;
+  resize: vertical;
 
   margin-bottom: 47px;
+  padding: 10px 13px;
   border: 2px solid #d7dcde;
 }
 
@@ -594,7 +661,7 @@ a {
   width: 1160px;
   padding-bottom: 79px;
 
-  outline: 3px solid red;
+  /*outline: 3px solid red; */
 }
 
 .let-us,
@@ -656,13 +723,13 @@ a {
 
   margin-bottom: 50px;
 
-  outline: 4px dashed green;
-  outline-offset: 3px;
+  /*outline: 4px dashed green;
+  outline-offset: 3px;*/
 }
 
 .sample-filter {
   width: 260px;
-  outline: 3px solid orange;
+  /*outline: 3px solid orange;*/
 }
 
 
@@ -674,7 +741,7 @@ a {
   width: 760px;
 
   justify-content: space-between;
-  outline: 3px solid red;
+/*  outline: 3px solid red;*/
 
   margin: 0;
   margin-bottom: 60px;
@@ -690,7 +757,7 @@ a {
   margin-bottom: 33px;
   padding-top: 40px;
 
-  outline: 2px dashed orange;
+  /*outline: 2px dashed orange;*/
 }
 
 .sample-item::before {
@@ -707,7 +774,7 @@ a {
   opacity: 0.12;
 }
 
-.sample-item:hover::before {
+.sample-item:hover {
   opacity: 1;
 }
 
@@ -1034,6 +1101,7 @@ a.button {
   left: 17px;
 }
 
+
 .range-controls .toggle-max {
   left: 158px;
 }
@@ -1065,18 +1133,22 @@ a.button {
   background: #f1f1f1;
 }
 
-/* Годится ли этот способ отключения стрелок в инпутах? */
+
 /* Chrome, Safari, Edge, Opera */
 .price-controls input::-webkit-outer-spin-button,
 .price-controls input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+  appearance: none;
   margin: 0;
 }
 
 /* Firefox */
 .price-controls input[type=number] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
+
+
 
 .max-price {
   text-align: right;
