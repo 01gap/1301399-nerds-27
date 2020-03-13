@@ -286,7 +286,7 @@ a {
   justify-content: space-between;
 
   margin-top: 40px;
-  padding-bottom: 60px;
+  padding-bottom: 59px;
   border-bottom: 2px solid #eeeeee;
 }
 
@@ -436,7 +436,6 @@ text-align: right;
   opacity: 0.1;
 }
 
-/* есть ли лучший способ вертикального выравнивания логотипов? */
 .clients-logo-list img[src*="htmlacademy-logo"] {
   padding-top: 16px;
   padding-bottom: 6px;
@@ -448,8 +447,8 @@ padding-bottom: 19px;
 }
 
 .clients-logo-list img[src*="mishka-logo"] {
-padding-top: 3px;
-padding-bottom: 3px;
+padding-top: 5px;
+padding-bottom: 1px;
 }
 
 .clients-logo-list li:not(:nth-child(4n))::after {
@@ -465,12 +464,33 @@ padding-bottom: 3px;
 
 /* footer styles below */
 
-.address-section {
-  position: relative;
+.iframe-map {
+  z-index: 2;
+}
 
+.address-wrapper {
+  position: relative;
+}
+
+.address-wrapper.main {
   padding-top: 80px;
   border-top: 2px solid #eeeeee;
 }
+
+.address-wrapper img {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+
+}
+
+
+.address-wrapper.main img {
+  top: 80px;
+}
+
+
 
 .address p {
   color: #666666;
@@ -480,14 +500,19 @@ padding-bottom: 3px;
 
 .address {
   position: absolute;
-  top: 134px;
+  z-index: 3;
+  top: 136px;
   left: 0;
 
   width: 220px;
-  padding: 48px 51px;
+  padding: 48px 50px;
   background-color: #ffffff;
 
 /*  outline: 2px dotted orange;*/
+}
+
+.address.catalog {
+  top: 56px;
 }
 
 .address .address-title {
@@ -508,9 +533,7 @@ padding-bottom: 3px;
   padding-bottom: 37px;
 }
 
-.address-section img {
-  margin-bottom: 62px;
-}
+
 
 .write-us-pop-up {
   display: none;
@@ -659,6 +682,7 @@ padding-bottom: 3px;
 .footer-bottom {
   display: flex;
   width: 1160px;
+  padding-top: 62px;
   padding-bottom: 79px;
 
   /*outline: 3px solid red; */
@@ -922,7 +946,7 @@ a.button {
 
   margin-right: 10px;
   margin-bottom: 10px;
-  padding: 17px 21px; /* approx. */
+  padding: 17px 21px;
 }
 
 .current-catalog-page {
@@ -932,7 +956,7 @@ a.button {
   border: 3px solid #dbdbdb;
 }
 
-/* Это законный прием - выбирать anchor с href для эффектов ховера и нажатия? */
+
 .pagination-list a[href]:hover,
 .pagination-list a[href]:focus {
   background-color: #dfdfdf;
@@ -1145,19 +1169,15 @@ a.button {
 /* Firefox */
 .price-controls input[type=number] {
   -moz-appearance: textfield;
-  appearance: textfield;
+  appearance: none;
 }
-
-
 
 .max-price {
   text-align: right;
 }
 
 .filter-sort-by {
-
   display: flex;
-  justify-content: space-between;
 
   width: 760px;
 }
@@ -1168,11 +1188,11 @@ a.button {
   flex-wrap: wrap;
   align-content: flex-start;
 
-
   font-size: 14px;
   text-transform: uppercase;
 
   margin: 0;
+  margin-left: auto;
   padding: 0;
 
 }
@@ -1180,8 +1200,9 @@ a.button {
 .sorting-modes a {
   display: block;
 
+
   margin-right: 27px;
-  padding-top: 7px;
+  padding-top: 5px;
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -1190,9 +1211,6 @@ a.button {
   color: rgba(0, 0, 0, 0.6);
 }
 
-/* можно ли использовать класс current в главном меню (для активной страницы) здесь,
-и задавать при этом разную стилизацию с его помощью? или лучше
-задавать им уникальные имена? */
 .sorting-modes a:active,
 .sorting-modes a.current {
   color: #000000;
@@ -1207,7 +1225,7 @@ a.button {
 .filter-sort-by p {
   min-width: 160px;
   margin: 0;
-  margin-bottom: 56px;
+  margin-bottom: 48px;
   padding: 0;
 }
 
@@ -1221,6 +1239,7 @@ a.button {
 
 
   margin: 0;
+  margin-left: 20px;
   padding: 0;
 }
 
