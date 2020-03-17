@@ -465,7 +465,7 @@ padding-bottom: 1px;
 /* footer styles below */
 
 .iframe-map {
-  z-index: 2;
+  z-index: 1;
 }
 
 .address-wrapper {
@@ -500,7 +500,7 @@ padding-bottom: 1px;
 
 .address {
   position: absolute;
-  z-index: 3;
+  z-index: 2;
   top: 136px;
   left: 0;
 
@@ -537,6 +537,7 @@ padding-bottom: 1px;
 
 .write-us-pop-up {
   display: none;
+  z-index: 3;
   position: fixed;
   bottom: 190px;
   right: 50%;
@@ -554,6 +555,9 @@ padding-bottom: 1px;
   padding-bottom: 84px;
 }
 
+.write-us-show {
+  display: block;
+}
 
 .modal-close {
   content: "";
@@ -652,6 +656,12 @@ padding-bottom: 1px;
 .input-fields input:focus,
 .input-fields textarea:focus {
   border: 2px solid #000000;
+}
+
+.input-fields input:invalid,
+.input-fields textarea:invalid {
+  color: #e74246;
+  border: 2px solid #e74246;
 }
 
 .input-fields input:focus::placeholder,
