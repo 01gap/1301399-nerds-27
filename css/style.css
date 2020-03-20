@@ -605,7 +605,6 @@ padding-bottom: 1px;
   animation: shake 0.6s;
 }
 
-
 .modal-close {
   content: "";
   position: absolute;
@@ -1474,7 +1473,7 @@ a.button {
 .sample-item {
   position: relative;
   width: 360px;
-  margin-bottom: 33px;
+  margin-bottom: 30px;
   padding-top: 40px;
 }
 
@@ -1501,16 +1500,13 @@ a.button {
 .sample-item-info {
   display: none;
   position: absolute;
+  bottom: 3px;
 
-  bottom: 0;
-
-  flex-direction: column;
-  align-items: center;
   margin: 0;
   text-align: center;
   background-color: #eeeeee;
   width: 360px;
-  min-height: 231px;
+
 }
 
 .sample-item:hover .sample-item-info {
@@ -1526,9 +1522,10 @@ a.button {
   text-transform: uppercase;
 
   margin-top: 12px;
-  margin-bottom: 2px;
-  padding-bottom: 15px;
+
   padding-top: 15px;
+  padding-bottom: 16px;
+
   }
 
 .sample-name:hover,
@@ -1547,7 +1544,7 @@ a.button {
   margin-top: 0;
   margin-left: 65px;
   margin-right: 65px;
-  margin-bottom: 28px;
+  margin-bottom: 29px;
   padding: 0;
 
 }
@@ -1557,12 +1554,11 @@ a.button {
   display: inline-block;
   vertical-align: top;
 
-  margin-top: auto;
-  margin-bottom: 30px;
+  margin-bottom: 44px;
   padding-left: 62px;
   padding-right: 60px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 17px;
+  padding-bottom: 15px;
   font-weight: 500;
   text-transform: uppercase;
   color: #ffffff;
