@@ -2,9 +2,9 @@ var link = document.querySelector(".write-us-button");
 var popup = document.querySelector(".write-us-pop-up");
 var close = popup.querySelector(".modal-close");
 var form = popup.querySelector("form");
-var name = popup.querySelector("[name=name]");
-var email = popup.querySelector("[name=email]");
-var comment = popup.querySelector("[name=comment]");
+var nameApplicant = popup.querySelector("[name=nameApplicant]");
+var emailApplicant = popup.querySelector("[name=emailApplicant]");
+var commentApplicant = popup.querySelector("[name=commentApplicant]");
 
 link.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -17,8 +17,9 @@ close.addEventListener("click", function (evt) {
 });
 
 form.addEventListener("submit", function (evt) {
-  if (!name.value || !email.value || !comment.value) {
+  if (!nameApplicant.value || !emailApplicant.value || !commentApplicant.value) {
     evt.preventDefault();
+    return false;
     }
 });
 

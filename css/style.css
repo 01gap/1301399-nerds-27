@@ -466,6 +466,9 @@ padding-bottom: 1px;
 
 .iframe-map {
   z-index: 1;
+
+  width: 100%;
+  border: 0;
 }
 
 .address-wrapper {
@@ -539,7 +542,7 @@ padding-bottom: 1px;
   display: none;
   z-index: 3;
   position: fixed;
-  bottom: 190px;
+  bottom: 100px;
   right: 50%;
 
   margin-right: -481px;
@@ -640,7 +643,7 @@ padding-bottom: 1px;
   box-sizing: border-box;
   width: 760px;
   min-height: 117px;
-  max-height: 80vh;
+  max-height: 30vh;
   resize: vertical;
 
   margin-bottom: 47px;
@@ -669,11 +672,8 @@ padding-bottom: 1px;
   color: #444444;
 }
 
-.input-fields input:invalid {
-  border: 2px solid #e74246;
-}
-
-.input-fields input:invalid::placeholder {
+.input-fields input:invalid::placeholder,
+.input-fields textarea:invalid::placeholder {
   color: #e74246;
 }
 
@@ -757,13 +757,10 @@ padding-bottom: 1px;
 
   margin-bottom: 50px;
 
-  /*outline: 4px dashed green;
-  outline-offset: 3px;*/
 }
 
 .sample-filter {
   width: 260px;
-  /*outline: 3px solid orange;*/
 }
 
 
@@ -775,7 +772,6 @@ padding-bottom: 1px;
   width: 760px;
 
   justify-content: space-between;
-/*  outline: 3px solid red;*/
 
   margin: 0;
   margin-bottom: 60px;
@@ -784,33 +780,6 @@ padding-bottom: 1px;
 }
 
 
-.sample-item {
-  position: relative;
-
-  width: 360px;
-  margin-bottom: 33px;
-  padding-top: 40px;
-
-  /*outline: 2px dashed orange;*/
-}
-
-.sample-item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  background-image: url("../img/browser.svg");
-  width: 360px;
-  height: 40px;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  opacity: 0.12;
-}
-
-.sample-item:hover {
-  opacity: 1;
-}
 
 
 .filter-grid-list,
@@ -984,16 +953,18 @@ a.button {
   padding-bottom: 15px;
 }
 
-
-
-
-
 .vk-button::before {
   content: "";
   position: absolute;
 
   width: 26px;
   height: 15px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
   background-image: url("../img/vk-icon.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1005,6 +976,12 @@ a.button {
 
   width: 12px;
   height: 22px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
   background-image: url("../img/fb-icon.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1016,10 +993,18 @@ a.button {
 
   width: 21px;
   height: 21px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
   background-image: url("../img/insta-icon.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
+
+
 
 .social-button {
   position: relative;
@@ -1033,6 +1018,8 @@ a.button {
   background-color: #eeeeee;
   border-radius: 50%;
 }
+
+
 
   .social-button:hover,
   .social-button:focus {
@@ -1438,8 +1425,41 @@ a.button {
 
 /* sample catalog below */
 
+
+
 .sample-item {
-  display: flex;
+  position: relative;
+  width: 360px;
+  margin-bottom: 33px;
+  padding-top: 40px;
+}
+
+.sample-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-image: url("../img/browser.svg");
+  width: 360px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.12;
+}
+
+.sample-item:hover::before {
+  opacity: 1;
+}
+
+
+
+.sample-item-info {
+  display: none;
+  position: absolute;
+
+  bottom: 0;
+
   flex-direction: column;
   align-items: center;
   margin: 0;
@@ -1447,6 +1467,10 @@ a.button {
   background-color: #eeeeee;
   width: 360px;
   min-height: 231px;
+}
+
+.sample-item:hover .sample-item-info {
+  display: block;
 }
 
 .sample-name {
@@ -1467,6 +1491,7 @@ a.button {
 .sample-name:focus {
   color: #fb565a;
 }
+
 
 .sample-name:active {
   color: rgba(0, 0, 0, 0.3);
